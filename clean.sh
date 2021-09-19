@@ -1,5 +1,4 @@
 #!/bin/bash
-#script to distclean
+#script to distcleain
+cd buildroot
 make distclean
-
-ls -alh
