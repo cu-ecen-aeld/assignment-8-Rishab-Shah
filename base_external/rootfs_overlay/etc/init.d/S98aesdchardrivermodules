@@ -3,11 +3,11 @@
 case "$1" in
   start)
 	echo "Starting module - aesd-char-driver"
-	/usr/bin/aesdchar_load
+	start-stop-daemon -S -n aesdchar_load -a /usr/bin/aesdchar_load
 	;;
    stop)
 	echo "Stopping module - aesd-char-driver"
-	/usr/bin/aesdchar_unload
+	start-stop-daemon -S -n aesdchar_unload -a /usr/bin/aesdchar_unload
 	;;
       *)
   exit 1
