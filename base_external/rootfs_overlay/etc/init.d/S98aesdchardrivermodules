@@ -1,0 +1,16 @@
+#! /bin/sh
+
+case "$1" in
+  start)
+	echo "Starting module - aesd-char-driver"
+	/usr/bin/aesdchar_load
+	;;
+   stop)
+	echo "Stopping module - aesd-char-driver"
+	/usr/bin/aesdchar_unload
+	;;
+      *)
+  exit 1
+esac
+
+exit 0
